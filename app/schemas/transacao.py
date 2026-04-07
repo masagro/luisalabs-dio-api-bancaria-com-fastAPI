@@ -18,7 +18,7 @@ class TransacaoCreate(BaseModel):
 class TransacaoRead(BaseModel):
     id: int
     tipo: str
-    valor:float
+    valor: float
     data: datetime
     conta_id: int
 
