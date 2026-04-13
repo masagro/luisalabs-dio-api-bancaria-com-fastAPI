@@ -58,7 +58,7 @@ poetry run alembic upgrade head
 
 4. **Inicie o servidor (FastAPI em modo de desenvolvimento):**
 ```bash
-poetry run fastapi dev app/main.py
+poetry run uvicorn app.main:app --reload
 ```
 
 ## 📚 Documentação e Testes (Swagger UI)
