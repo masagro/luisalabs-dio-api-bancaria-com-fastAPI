@@ -40,6 +40,6 @@ class TransacaoService:
     
     @staticmethod
     async def extrato(conta_id: int, db: AsyncSession):
-        stmt = select(Transacao).where(Transacao.id == conta_id)
+        stmt = select(Transacao).where(Transacao.conta_id == conta_id)
         result = await db.execute(stmt)
         return result.scalars().all()

@@ -9,7 +9,7 @@ class ContaService:
         #Verificar se o numero de conta já está cadastrado
         stmt = select(Contas).where(Contas.numero_conta == data.numero_conta)
         result = await db.execute(stmt)
-        existe = result.scalar_one_or_none
+        existe = result.scalar_one_or_none()
 
         if existe:
             raise ValueError("Número de conta já esta em uso")
